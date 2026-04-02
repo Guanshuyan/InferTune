@@ -1,0 +1,32 @@
+# InferTune 默认配置模板
+
+llm:
+  backend: "gateway" # "openai" 或 "gateway"
+  model: "deepseek-v3.2-exp"
+  api_key: "<LLM_API_KEY>"
+  base_url: ""               # openai 后端的 API 地址，留空使用官方默认
+  api_url: "<LLM_API_URL>"
+  temperature: 0.8
+  max_tokens: 4096
+  qps: 100
+  qpm: 600
+
+eval:
+  metric: "accuracy"
+  num_samples: 50
+
+protegi:
+  beam_width: 4
+  search_depth: 6
+  minibatch_size: 64
+  num_gradients: 4
+  num_edits_per_gradient: 1
+  num_monte_carlo: 2
+  selection_method: "ucb"
+
+ace:
+  mode: "offline"            # "offline" 或 "online"
+  max_reflector_rounds: 5
+  max_epochs: 5
+  dedup_threshold: 0.85
+  batch_size: 1

@@ -1,0 +1,5 @@
+# 对包含敏感信息的文件启用 mask filter
+configs/default.yaml filter=mask
+tools/llm/local_inference.py filter=mask
+examples/context_engine_demo.py filter=mask
+examples/prompt_optimize_demo.py filter=mask

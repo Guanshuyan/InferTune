@@ -3,5 +3,30 @@
 # claude
 .claude
 
+# git filters (contain real secrets for smudge)
+.gitfilters/
+
 # ds
 .DS_Store
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+
+# env
+.env
+.venv/
+venv/
+
+# ide
+.idea/
+.vscode/
+*.swp
+
+# output
+playbook_output.json

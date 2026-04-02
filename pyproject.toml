@@ -1,0 +1,25 @@
+[project]
+name = "infertune"
+version = "0.1.0"
+description = "推理时上下文优化框架：无需训练，通过优化输入上下文提升 LLM 任务表现"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.0",
+    "pyyaml>=6.0",
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4",
+]
+
+[tool.setuptools.packages.find]
+include = ["infertune*"]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
